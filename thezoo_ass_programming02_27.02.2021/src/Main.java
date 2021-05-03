@@ -24,7 +24,6 @@ public class Main {
 	public static void main(String[] args) {
 		
 		createAnimals();
-		Bird example = new Bird(0, "Example", true, "Food", "best freind", "Forest");
 		boolean loop = true;
 		
 		while(loop == true) {
@@ -63,8 +62,6 @@ public class Main {
 		
 		}
 		
-		example.displayFullInfo();
-		
 		
 	}
 
@@ -80,9 +77,13 @@ public class Main {
 		System.out.println(" Enter the name of the animal you want full info on ....");
 		String input = imp.next();
 		
-		for(int i=0; i < animalList.size(); i++) {
-			if(animalList.get(i).name == input) {
+		//NTS come back too dont knwo why this doesn't work ...
+		
+		for(int i = 0; i < animalList.size(); i++) {
+			if(animalList.get(i).name.equals(input)) {
 				animalList.get(i).displayFullInfo();
+			}else {
+				System.out.println("Searching ... " + animalList.get(i).name);
 			}
 		}
 		
@@ -190,13 +191,60 @@ public class Main {
 
 
 	private static void createAnimals() {
-		Mammal dog = new Mammal(0, "Dog", true, "dogFood", "mans best freind", "Forest");
+		
+		//a few examples (not really correct information)....
+		
+		Mammal dog = new Mammal((mammalList.size()), "Dog", true, "dog food", "mans best friend", "Forest");
 		animalList.add(dog);
 		mammalList.add(dog);
 		
-		Mammal cat = new Mammal(1, "Cat", true, "CatFood", "womans best freind", "Forest");
+		Mammal cat = new Mammal((mammalList.size()), "Cat", true, "cat food", "womans best friend", "Forest");
 		animalList.add(cat);
 		mammalList.add(cat);
+		
+		Bird pigeon = new Bird((birdList.size()), "Pigeon", false, "seeds", "nicks your chips", "Forest");
+		animalList.add(pigeon);
+		birdList.add(pigeon);
+		
+		Bird hawk = new Bird((birdList.size()), "Hawk", true, "small mammals", "scary, technically a mammal i think", "Jungle");
+		animalList.add(hawk);
+		birdList.add(hawk);
+		
+		Mammal kangaroo = new Mammal((mammalList.size()), "Kangaroo", false, "bush food", "hoppy", "Desert");
+		animalList.add(kangaroo);
+		mammalList.add(kangaroo);
+		
+		Mammal monkey = new Mammal((mammalList.size()), "Monkey", false, "berrys", "like us", "Jungle");
+		animalList.add(monkey);
+		mammalList.add(monkey);
+		
+		Reptile alligator = new Reptile((reptileList.size()), "Alligator", true, "mammals", "lurking in the swamp", "Jungle");
+		animalList.add(alligator);
+		reptileList.add(alligator);
+		
+		Fish siamese = new Fish((fishList.size()), "Siamese Figting Fish", false, "fish food", "looks colourful", "Jungle");
+		animalList.add(siamese);
+		fishList.add(siamese);
+		
+		Fish carp = new Fish((fishList.size()), "Common Carp", false, "plants", "we eat alot of then", "Forest");
+		animalList.add(carp);
+		fishList.add(carp);
+		
+		Reptile iguana = new Reptile((reptileList.size()), "Iguana", true, "small mammals", "looks like a dragon", "Jungle");
+		animalList.add(iguana);
+		reptileList.add(iguana);
+		
+		Mammal cammel = new Mammal((mammalList.size()), "Cammel", false, "plants", "has humps", "Desert");
+		animalList.add(cammel);
+		mammalList.add(cammel);
+		
+		
+		
+		
+	}
+	
+	
+	
 	}
 
-}
+

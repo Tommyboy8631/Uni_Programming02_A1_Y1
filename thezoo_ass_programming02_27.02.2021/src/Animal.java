@@ -33,10 +33,10 @@ public class Animal {
 		System.out.println(" ---------------------------- \n"
 				+ " Animal ID = " + animalId
 				+ "\n Name = " + name
-				+ "\n IfCarnivore " + ifCarnivore 
-				+ "\n FoodType " + foodType
-				+ "\n Description " + description
-				+ "\n Animals Enviorment" + animalEn
+				+ "\n IfCarnivore = " + ifCarnivore 
+				+ "\n FoodType = " + foodType
+				+ "\n Description = " + description
+				+ "\n Animals Enviorment = " + animalEn
 				+ "\n ----------------------------");
 	}
 }
